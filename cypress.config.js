@@ -1,3 +1,4 @@
-const tsConfig = require('./cypress.config.ts');
-
-module.exports = tsConfig;
+module.exports = async () => {
+  const tsConfig = await import('./cypress.config.mts');
+  return tsConfig.default;
+};
