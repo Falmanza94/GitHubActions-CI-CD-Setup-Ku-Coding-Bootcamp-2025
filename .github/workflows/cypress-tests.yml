@@ -17,18 +17,10 @@ jobs:
         with:
           node-version: 18
 
-      - name: Install dependencies
+      - name: Install client dependencies
+        working-directory: client
         run: npm install
 
-      - name: Install client and server deps
-        run: |
-          cd client
-          npm install
-          cd ../server
-          npm install
-
       - name: Run Cypress component tests
-        run: |
-          cd client
-          npx cypress run --component --config-file=../cypress.config.js
-
+        working-directory: client
+        run: npx cypress run --component --config-file=cypress.config.cjs
