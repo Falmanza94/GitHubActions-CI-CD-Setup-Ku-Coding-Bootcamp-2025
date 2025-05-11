@@ -1,5 +1,5 @@
 // cypress.config.js
 export default async function () {
-  const tsConfig = await import('./cypress.config.mts');
-  return tsConfig.default;
+  const config = await import('./cypress.config.mts');
+  return config.default;
 }
