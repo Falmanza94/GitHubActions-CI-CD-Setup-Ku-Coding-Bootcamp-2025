@@ -10,6 +10,7 @@ export default defineConfig({
         plugins: [react()],
       },
     },
-    specPattern: 'cypress/component/**/*.cy.{js,jsx,ts,tsx}', // <-- this tells Cypress where to look
+    specPattern: 'cypress/component/**/*.cy.{js,jsx,ts,tsx}',
+    supportFile: 'cypress/support/component.js',
   },
 });
