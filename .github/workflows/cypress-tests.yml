@@ -27,7 +27,7 @@ jobs:
           cd ../server
           npm install
 
-      - name: Run Cypress component tests
+      - name: Run Cypress component tests (ESM-compatible)
         run: |
           cd client
-          npx cypress run --component --config-file=../cypress.config.ts
+          node --loader ts-node/esm ../../node_modules/.bin/cypress run --component --config-file=../cypress.config.ts
