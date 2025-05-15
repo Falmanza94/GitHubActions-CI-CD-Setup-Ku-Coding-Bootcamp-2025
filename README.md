@@ -43,6 +43,9 @@ This project is meant to demonstrate a full-stack CI/CD workflow with GitHub Act
 -  Make sure cypress.config.js uses import/export IF "type": "module" is set in package.json
 -  Ensure the file path in cypress.config.js are correct relative to the client directory.
 
+## Live website
+
+Check out the live website here: https://githubactions-ci-cd-setup-ku-coding.onrender.com
 
 ## Collaborators
 
